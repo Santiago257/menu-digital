@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Digital - Marisquería</title>
+    <style>
+        :root {
+            --primary-bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent-yellow: #f59e0b;
+            --accent-cyan: #06b6d4;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --price-color: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-light);
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+            border-bottom: 2px solid var(--accent-cyan);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-yellow);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .category-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .category-card h2 {
+            font-size: 1.4rem;
+            color: var(--accent-cyan);
+            border-bottom: 2px solid var(--accent-yellow);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px stroke #334155;
+        }
+
+        .item-info {
+            flex-grow: 1;
+            padding-right: 10px;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .item-subtext {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .item-price {
+            font-weight: bold;
+            color: var(--price-color);
+            white-space: nowrap;
+            text-align: right;
+        }
+
+        .price-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Menú de Mariscos</h1>
+    </header>
+
+    <main class="menu-grid">
+
+        <!-- COCTÉLES -->
+        <section class="category-card">
+            <h2>Coctéles</h2>
+            <div class="item">
+                <div class="item-info">
+                    <div class="item-title">Camarón / Ostión</div>
+                </div>
+                <div class="price-list">
+                    <span>Chico: $70</span>
+                    <span>Mediano: $145</span>
+                    <span>Chavela: $180</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-info">
+                    <div class="item-title">Pulpo</div>
+                </div>
+                <div class="price-list">
+                    <span>Chico: $80</span>
+                    <span>Mediano: $160</span>
+                    <span>Chavela: $195</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-info">
+                    <div class="item-title">Campechano</div>
+                </div>
+                <div class="price-list">
+                    <span>Chico: $75</span>
+                    <span>Mediano: $155</span>
+                    <span>Chavela: $190</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- OSTRAS -->
+        <section class="category-card">
+            <h2>Ostras</h2>
+            <div class="item">
+                <div class="item-info">
+                    <div class="item-title">Almeja / Ostión / Pata de Mula</div>
+                </div>
+                <div class="item-price">$145</div>
+            </div>
+        </section>
+
+        <!-- SOPAS Y CALDOS -->
+        <section class="category-card">
+            <h2>Sopas y Caldos</h2>
+            <div class="item">
+                <div class="item-info">
+                    <div class="item-title">Sopa de Mariscos</div>
+                </div>
+                <div class="price-list">
+                    <span>Media: $50</span>
+                    <span>Completa: $80</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-info">
+                    <div class="item-title">Caldo de Camarón o Pescado</div>
+                </div>
+                <div class="price-list">
+                    <span>Media: $45</span>
+                    <span>Completa: $70</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOSTADAS -->
+        <section class="category-card">
+            <h2>Tostadas</h2>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Tostada de Ceviche</div></div>
+                <div class="item-price">$60</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Tostada de Camarón</div></div>
+                <div class="item-price">$75</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Tostada de Pulpo</div></div>
+                <div class="item-price">$85</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Tostada de Campechana</div></div>
+                <div class="item-price">$85</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Tostada de Aguachile</div></div>
+                <div class="item-price">$105</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Tostada de Atún</div></div>
+                <div class="item-price">$90</div>
+            </div>
+        </section>
+
+        <!-- TACOS, BURROS Y PESCADILLAS -->
+        <section class="category-card">
+            <h2>Tacos, Burros y Pescadillas</h2>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Pescadilla Clásica</div></div>
+                <div class="item-price">$15</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Pescadilla de Camarón</div></div>
+                <div class="item-price">$30</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Taco de Pescado</div></div>
+                <div class="item-price">$45</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Taco de Camarón</div></div>
+                <div class="item-price">$50</div>
+            </div>
+            <div class="item">
+                <div class="item-info">
+                    <div class="item-title">Burro de Camarón</div>
+                    <div class="item-subtext">Frito / Aplastado</div>
+                </div>
+                <div class="price-list">
+                    <span>$55</span>
+                    <span>c/papas: $65</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-info">
+                    <div class="item-title">Burro de Pulpo</div>
+                    <div class="item-subtext">Frito / Aplastado</div>
+                </div>
+                <div class="price-list">
+                    <span>$60</span>
+                    <span>c/papas: $70</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAMARONES -->
+        <section class="category-card">
+            <h2>Camarones</h2>
+            <div class="item">
+                <div class="item-info">
+                    <div class="item-title">Especialidades</div>
+                    <div class="item-subtext">Al Ajillo / Al Mojo / Mantequilla / Con Camiseta / Chicharrón / A la Diabla / Empanizado / Popcorn</div>
+                </div>
+                <div class="price-list">
+                    <span>Media: $110</span>
+                    <span>Completa: $210</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PESCADOS -->
+        <section class="category-card">
+            <h2>Pescados</h2>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Tira</div></div>
+                <div class="item-price">$30</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Tira con Papas</div></div>
+                <div class="item-price">$40</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Chicharrón</div></div>
+                <div class="item-price">$125</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Mojarra</div></div>
+                <div class="item-price">$175</div>
+            </div>
+            <div class="item">
+                <div class="item-info">
+                    <div class="item-title">Filete</div>
+                    <div class="item-subtext">Empanizado / Empapelado / A la Plancha</div>
+                </div>
+                <div class="price-list">
+                    <span>Media: $85</span>
+                    <span>Completa: $160</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Huachinango</div></div>
+                <div class="item-price">$200</div>
+            </div>
+        </section>
+
+        <!-- AGUACHILES Y CEVICHES -->
+        <section class="category-card">
+            <h2>Aguachiles y Ceviches</h2>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Tiradito de Marlin</div></div>
+                <div class="item-price">$220</div>
+            </div>
+            <div class="item">
+                <div class="item-info">
+                    <div class="item-title">Camarón</div>
+                    <div class="item-subtext">Verde / Rojo / Negro / Habanero</div>
+                </div>
+                <div class="item-price">$210</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Aguacallo</div></div>
+                <div class="item-price">$280</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Mixto</div></div>
+                <div class="item-price">$270</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Molcajete Sirena</div></div>
+                <div class="item-price">$330</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Aguachile de Atún</div></div>
+                <div class="item-price">$250</div>
+            </div>
+            <div class="item">
+                <div class="item-info">
+                    <div class="item-title">Charola Sirena</div>
+                    <div class="item-subtext">Pulpo, atún, camarón crudo y cocido</div>
+                </div>
+                <div class="item-price">$365</div>
+            </div>
+        </section>
+
+        <!-- PULPO -->
+        <section class="category-card">
+            <h2>Pulpo</h2>
+            <div class="item">
+                <div class="item-info">
+                    <div class="item-title">Especialidades</div>
+                    <div class="item-subtext">A la Diabla / Al Ajillo / Al Mojo / Encebollado</div>
+                </div>
+                <div class="price-list">
+                    <span>Media: $130</span>
+                    <span>Completa: $240</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXTRAS -->
+        <section class="category-card">
+            <h2>Extras</h2>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Tostadas (2 piezas)</div></div>
+                <div class="item-price">$7</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Pan (1 pieza)</div></div>
+                <div class="item-price">$7</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Orden de Aguacate</div></div>
+                <div class="item-price">$10</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Orden de Papas</div></div>
+                <div class="item-price">$30</div>
+            </div>
+        </section>
+
+        <!-- POSTRES -->
+        <section class="category-card">
+            <h2>Postres</h2>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Helado</div></div>
+                <div class="item-price">$70</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Pastel</div></div>
+                <div class="item-price">$60</div>
+            </div>
+        </section>
+
+        <!-- BEBIDAS -->
+        <section class="category-card">
+            <h2>Bebidas</h2>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Agua Fresca</div></div>
+                <div class="price-list">
+                    <span>Media: $25</span>
+                    <span>Completa: $40</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Refrescos</div></div>
+                <div class="item-price">$40</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Refresco Preparado</div></div>
+                <div class="item-price">$50</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Cerveza</div></div>
+                <div class="item-price">$50</div>
+            </div>
+            <div class="item">
+                <div class="item-info">
+                    <div class="item-title">Michelada / Chelada</div>
+                    <div class="item-subtext">Con Camarón / Ostión: $70</div>
+                </div>
+                <div class="price-list">
+                    <span>Chelada: $55</span>
+                    <span>Michelada: $60</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-info">
+                    <div class="item-title">Caguama</div>
+                    <div class="item-subtext">Con Camarón / Ostión: $125</div>
+                </div>
+                <div class="item-price">$95</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Michelada de Caguama</div></div>
+                <div class="item-price">$115</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Torres</div></div>
+                <div class="item-price">$80</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Bacardi</div></div>
+                <div class="item-price">$80</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Centenario Plata</div></div>
+                <div class="item-price">$90</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Maestro Dobel</div></div>
+                <div class="item-price">$95</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Caballito Sangrita</div></div>
+                <div class="item-price">$40</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Clamato Preparado</div></div>
+                <div class="item-price">$60</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Café Americano</div></div>
+                <div class="item-price">$40</div>
+            </div>
+            <div class="item">
+                <div class="item-info"><div class="item-title">Capuchino</div></div>
+                <div class="item-price">$50</div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
